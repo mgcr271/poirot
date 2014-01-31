@@ -9,7 +9,7 @@ permalink:	/:title
 title:		Ramnath
 tagline:	'blog'
 description:	'Random Ramblings'
-url:		"poirot"
+url:		"/poirot"
 
 author:
   name:		'Ramnath Vaidyanathan'
