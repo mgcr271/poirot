@@ -9,7 +9,7 @@ mode: selfcontained
   {{# pages }}{{# date }}
 		<div>
 			<span class="post-date">{{ date }}</span>
-			<h1><a href="{{site.url}}{{ link }}">{{ title }}</a></h1>
+			<h1><a href="{{ link }}">{{ title }}</a></h1>
 			<p class="post-description">{{ description }}</p>
 		</div>
 		<br>
