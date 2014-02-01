@@ -372,27 +372,27 @@ chart_1
 <h2>AutoPlay</h2>
 <p>Now suppose, we want to provide the user with a play button that would automatically animate the choropleth map. We can use a bit of AngularJS magic again and achieve this by using the code below.</p>
 
-<pre><code class="r">map3 = map2$copy()
-map3$setTemplate(chartDiv = &quot;
-  &lt;div class=&#39;container&#39;&gt;
-    &lt;button ng-click=&#39;animateMap()&#39;&gt;Play&lt;/button&gt;
-    &lt;div id=&#39;chart_1&#39; class=&#39;rChart datamaps&#39;&gt;&lt;/div&gt;  
-  &lt;/div&gt;
-  &lt;script&gt;
-    function rChartsCtrl($scope, $timeout){
-      $scope.year = 1960;
-      $scope.animateMap = function(){
-        if ($scope.year &gt; 2010){
-          return;
-        }
-        mapchart_1.updateChoropleth(chartParams.newData[$scope.year]);
-        $scope.year += 1
-        $timeout($scope.animateMap, 1000)
+<pre><code class="html">&lt;div class=&#39;container&#39;&gt;
+  &lt;button ng-click=&#39;animateMap()&#39;&gt;Play&lt;/button&gt;
+  &lt;div id=&#39;chart_1&#39; class=&#39;rChart datamaps&#39;&gt;&lt;/div&gt;  
+&lt;/div&gt;
+&lt;script&gt;
+  function rChartsCtrl($scope, $timeout){
+    $scope.year = 1960;
+    $scope.animateMap = function(){
+      if ($scope.year &gt; 2010){
+        return;
       }
+      mapchart_1.updateChoropleth(chartParams.newData[$scope.year]);
+      $scope.year += 1
+      $timeout($scope.animateMap, 1000)
     }
-  &lt;/script&gt;&quot;
-)
-map3
+  }
+&lt;/script&gt;
+</code></pre>
+
+<pre><code class="r">map3 = map2$copy()
+  &lt;div class=&#39;container&#39;&gt;
 </code></pre>
 
 <iframe src='fig/autochoro.html' scrolling='no' seamless class='rChart datamaps' id=iframe-

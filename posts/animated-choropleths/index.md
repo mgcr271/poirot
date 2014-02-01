@@ -362,29 +362,30 @@ chart_1
 
 Now suppose, we want to provide the user with a play button that would automatically animate the choropleth map. We can use a bit of AngularJS magic again and achieve this by using the code below.
 
+```html
+<div class='container'>
+  <button ng-click='animateMap()'>Play</button>
+  <div id='chart_1' class='rChart datamaps'></div>  
+</div>
+<script>
+  function rChartsCtrl($scope, $timeout){
+    $scope.year = 1960;
+    $scope.animateMap = function(){
+      if ($scope.year > 2010){
+        return;
+      }
+      mapchart_1.updateChoropleth(chartParams.newData[$scope.year]);
+      $scope.year += 1
+      $timeout($scope.animateMap, 1000)
+    }
+  }
+</script>
+```
+
 
 ```r
 map3 = map2$copy()
-map3$setTemplate(chartDiv = "
   <div class='container'>
-    <button ng-click='animateMap()'>Play</button>
-    <div id='chart_1' class='rChart datamaps'></div>  
-  </div>
-  <script>
-    function rChartsCtrl($scope, $timeout){
-      $scope.year = 1960;
-      $scope.animateMap = function(){
-        if ($scope.year > 2010){
-          return;
-        }
-        mapchart_1.updateChoropleth(chartParams.newData[$scope.year]);
-        $scope.year += 1
-        $timeout($scope.animateMap, 1000)
-      }
-    }
-  </script>"
-)
-map3
 ```
 
 
