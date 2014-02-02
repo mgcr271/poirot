@@ -9,7 +9,8 @@ permalink:	/:title
 title:		Ramnath
 tagline:	'blog'
 description:	'Random Ramblings'
-url:		""
+url:		"/poirot"
+baseurl: ""
 
 author:
   name:		'Ramnath Vaidyanathan'
@@ -18,8 +19,8 @@ author:
 paginate:	5
 
 # Custom vars
-ico: /assets/images/slidify_logo_small.ico
-icon:		/assets/images/slidify_logo_small.png
+ico:      /assets/images/slidify_logo_small.ico
+icon:		  /assets/images/slidify_logo_small.png
 cover:		/assets/images/data_science.jpg
 
 social:

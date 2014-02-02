@@ -2,14 +2,14 @@
 	<link href="http://gmpg.org/xfn/11" rel="profile">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
   {{# page.article }}
-	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+	<link rel="canonical" href="{{ site.url }}{{ page.link }}" />
 	<meta name="description" content="{{ page.quote }}" />
 	<meta property="og:description" content="{{ page.description }}" />
 	<meta itemprop="image" content="{{ page.image }}" />
 	<meta property="og:image" content="{{ page.image }}" />
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.link }}" />
 	<meta property="og:site_name" content="{{ site.title }}" />
   {{/ page.article }}
 	<title>{{ page.title }}</title>
@@ -22,7 +22,7 @@
 	<link href="{{ page.url.framework }}/assets/css/genericons.css" type="text/css" rel="stylesheet" />
 	<link href="{{ page.url.framework }}/assets/css/syntax.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
-	<link rel="apple-touch-icon" href="{{site.url}}{{ site.icon }}">
-	<link rel="shortcut icon" href="{{site.url}}{{site.ico}}">
+	<link rel="apple-touch-icon" href="{{site.baseurl}}{{ site.icon }}">
+	<link rel="shortcut icon" href="{{site.baseurl}}{{site.ico}}">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}/atom.xml">
 </head>

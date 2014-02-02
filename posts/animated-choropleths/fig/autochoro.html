@@ -3,6 +3,8 @@
 <html>
   <head>
     
+    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' />
     <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
     <script src='http://d3js.org/topojson.v1.min.js' type='text/javascript'></script>
     <script src='http://datamaps.github.io/scripts/datamaps.all.min.js' type='text/javascript'></script>
@@ -24,7 +26,9 @@
     
     
       <div class='container'>
-        <button ng-click='animateMap()'>Play</button>
+        <button class='btn' ng-click='animateMap()'>
+        <i class="fa fa-play"></i>
+        </button>
         <h4>Crime Rate (per 100,000) in {{ year }}</h4>
         <div id='chart_1' class='rChart datamaps'></div>  
       </div>

@@ -15,11 +15,11 @@
   	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
   	<link rel="apple-touch-icon" href="/assets/images/slidify_logo_small.png">
   	<link rel="shortcut icon" href="/assets/images/slidify_logo_small.ico">
-  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/poirot/atom.xml">
   </head>  <link href="../../libraries/highlighters/prettify/css/twitter-bootstrap.css" rel="stylesheet" />
   
 	<body>
-		<header class="clean" style="background-image: url(citibikes2.jpg );height: 100%;">
+		<header class="clean" style="background-image: url(/poirotcitibikes2.jpg );height: 100%;">
 	    <label class="menu" for="_1">
   	<span class="genericon genericon-menu"></span>
   </label>
@@ -44,12 +44,13 @@
   </a>
 </div>
 	    <div id="post-info">
+        2014-02-01
 		    <h1>Visualizing Bike Sharing Networks</h1>
-		    <!-- <a class="site-title" href="">
+		    <!-- <a class="site-title" href="/poirot">
 			    <img src="/assets/images/slidify_logo_small.png" class="site-icon-small">
 			    Ramnath
 		    </a> -->
-		    2014-02-01
+        <div class='share'></div>
 	    </div>
 	    <div id="nav-icon" style="bottom: 60px;">
 		    <a class="scroll" data-speed="1000" href="#article">
@@ -12027,15 +12028,29 @@ id='iframe-chart136453dba1d00'>
   pre {margin-left: 0px;}
 </style>
 
+      <div class='share' style='margin-top:30px;'></div>
     </div>
-    <footer class="clean" style="background-image: url(citibikes2.jpg );height: 40%; min-height: 250px;">
+     
+    <footer class="clean" style="background-image: url(/poirot/posts/animated-choropleths/map1.jpg );height: 40%; min-height: 250px;">
       <div id="nav-icon" style="top: 25px;">
     		<a class="scroll" data-speed="1000" href="#article">
           <span class="genericon genericon-collapse"></span>
         </a>
     	</div>
+      <div id="post-info">
+    		<a href="/poirot/posts/animated-choropleths/index.html">
+    			<h1>Animated Choropleths</h1>
+    		</a>
+    		<div id="nav-icon" style="bottom: -10px;">
+    		  <a data-speed="1000" href="/poirot/posts/animated-choropleths/index.html">
+            <span class="genericon genericon-expand"></span>
+          </a>
+    	   </div>
+    	</div>
     </footer>	</body>
   <script src="../../libraries/frameworks/thinny/assets/js/smooth-scroll.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../libraries/frameworks/thinny/assets/js/share.min.js"></script>
   
   <!-- Google Prettify -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
@@ -12048,4 +12063,9 @@ id='iframe-chart136453dba1d00'>
     prettyPrint();
   </script>
   <!-- End Google Prettify --> 
-  </html>
+    <script type='text/javascript'>
+    $('.share').share({
+      text: "Visualizing Bike Sharing Networks"
+    })
+  </script>
+</html>

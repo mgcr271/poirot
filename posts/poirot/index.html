@@ -3,14 +3,14 @@
   <head>
   	<link href="http://gmpg.org/xfn/11" rel="profile">
   	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-  	<link rel="canonical" href="assets,../../libraries,../../libraries/widgets,../../libraries/frameworks/thinny,../../libraries/frameworks/thinny/,../../libraries/highlighters,c(&quot;../../libraries/frameworks/thinny/layouts&quot;, &quot;assets/layouts&quot;),../../libraries/highlighters/prettify" />
+  	<link rel="canonical" href="/poirotposts/poirot/index.html" />
 	<meta name="description" content="" />
 	<meta property="og:description" content="This is my blog, where I shall be posting all sorts of random ramblings, mainly related to data science and R." />
 	<meta itemprop="image" content="poirot.jpg" />
 	<meta property="og:image" content="poirot.jpg" />
 	<meta property="og:title" content="Poirot" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="assets,../../libraries,../../libraries/widgets,../../libraries/frameworks/thinny,../../libraries/frameworks/thinny/,../../libraries/highlighters,c(&quot;../../libraries/frameworks/thinny/layouts&quot;, &quot;assets/layouts&quot;),../../libraries/highlighters/prettify" />
+	<meta property="og:url" content="/poirotposts/poirot/index.html" />
 	<meta property="og:site_name" content="Ramnath" />
 	<title>Poirot</title>
   	<meta name="mobile-web-app-capable" content="yes">
@@ -24,11 +24,11 @@
   	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
   	<link rel="apple-touch-icon" href="/assets/images/slidify_logo_small.png">
   	<link rel="shortcut icon" href="/assets/images/slidify_logo_small.ico">
-  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  	<link rel="alternate" type="application/rss+xml" title="RSS" href="/poirot/atom.xml">
   </head>  <link href="../../libraries/highlighters/prettify/css/twitter-bootstrap.css" rel="stylesheet" />
   
 	<body>
-		<header class="clean" style="background-image: url(poirot.jpg );height: 100%;">
+		<header class="clean" style="background-image: url(/poirotpoirot.jpg );height: 100%;">
 	    <label class="menu" for="_1">
   	<span class="genericon genericon-menu"></span>
   </label>
@@ -53,12 +53,13 @@
   </a>
 </div>
 	    <div id="post-info">
+        2014-01-28
 		    <h1>Poirot</h1>
-		    <!-- <a class="site-title" href="">
+		    <!-- <a class="site-title" href="/poirot">
 			    <img src="/assets/images/slidify_logo_small.png" class="site-icon-small">
 			    Ramnath
 		    </a> -->
-		    2014-01-28
+        <div class='share'></div>
 	    </div>
 	    <div id="nav-icon" style="bottom: 60px;">
 		    <a class="scroll" data-speed="1000" href="#article">
@@ -103,15 +104,29 @@ $ open localhost:8080/posts
   pre {margin-left: 0px;}
 </style>
 
+      <div class='share' style='margin-top:30px;'></div>
     </div>
-    <footer class="clean" style="background-image: url(poirot.jpg );height: 40%; min-height: 250px;">
+     
+    <footer class="clean" style="background-image: url( /poirot/assets/images/data_science.jpg);height: 40%; min-height: 250px;">
       <div id="nav-icon" style="top: 25px;">
     		<a class="scroll" data-speed="1000" href="#article">
           <span class="genericon genericon-collapse"></span>
         </a>
     	</div>
+      <div id="post-info">
+    		<a href="/poirot">
+    			<h1></h1>
+    		</a>
+    		<div id="nav-icon" style="bottom: -10px;">
+    		  <a data-speed="1000" href="/poirot">
+            <span class="genericon genericon-expand"></span>
+          </a>
+    	   </div>
+    	</div>
     </footer>	</body>
   <script src="../../libraries/frameworks/thinny/assets/js/smooth-scroll.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../libraries/frameworks/thinny/assets/js/share.min.js"></script>
   
   <!-- Google Prettify -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
@@ -124,4 +139,9 @@ $ open localhost:8080/posts
     prettyPrint();
   </script>
   <!-- End Google Prettify --> 
-  </html>
+    <script type='text/javascript'>
+    $('.share').share({
+      text: "Poirot"
+    })
+  </script>
+</html>
