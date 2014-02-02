@@ -5,9 +5,8 @@ framework: thinny
 highlighter: prettify
 hitheme: twitter-bootstrap
 article: true
-url: {lib: ../../libraries}
+url: {lib: ../libraries}
 mode: selfcontained
-date: "2014-01-28"
 image: "poirot.jpg"
 description: >
   This is my blog, where I shall be posting all sorts of random ramblings, mainly related to data science and R.
