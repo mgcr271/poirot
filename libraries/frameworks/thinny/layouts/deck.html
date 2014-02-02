@@ -4,7 +4,7 @@
   <link href="{{page.url.highlighter}}/css/{{page.hitheme}}.css" rel="stylesheet" />
   {{{ page.assets.css }}}
 	<body>
-		<header class="{{ page.class }}" style="background-image: url({{# page.image }}{{site.url}}{{ page.image }}{{/ page.image }} {{^ page.image }}{{site.url}}{{ site.cover }}{{/ page.image }});{{# page.background_position }} background-position: {{ page.background_position }};{{/ page.background_position }}height: 100%;">
+		<header class="{{ page.class }}" style="background-image: url({{# page.image }}{{ page.image }}{{/ page.image }} {{^ page.image }}{{site.url}}{{ site.cover }}{{/ page.image }});{{# page.background_position }} background-position: {{ page.background_position }};{{/ page.background_position }}height: 100%;">
 	    {{ > top }}
 	    <div id="post-info">
         {{ page.date }}
