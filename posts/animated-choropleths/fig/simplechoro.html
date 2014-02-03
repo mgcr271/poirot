@@ -331,12 +331,7 @@
 },
 "legend": true,
 "labels": true,
-"id": "chart_1",
-done: function(datamap) {
-  datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography, data) {
-     alert(JSON.stringify(data));
-  });
-}
+"id": "chart_1" 
 }
   chartParams.element = document.getElementById('chart_1')
   
@@ -352,7 +347,7 @@ done: function(datamap) {
   }
   
   if (chartParams.labels){
-    mapchart_1.labels({"labelColor": "blue"})
+    mapchart_1.labels()
   }
   
   if (chartParams.legend){
@@ -379,5 +374,6 @@ done: function(datamap) {
 }
 </style>
     
+    <script></script>    
   </body>
 </html>

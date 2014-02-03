@@ -274,6 +274,18 @@ fills = setNames(
 
 ```r
 library(plyr)
+```
+
+```
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, desc, failwith, id, mutate, summarise
+```
+
+```r
 library(rCharts)
 options(rcharts.cdn = TRUE)
 dat2 <- dlply(na.omit(datm2), "Year", function(x){

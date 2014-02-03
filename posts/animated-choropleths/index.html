@@ -300,7 +300,17 @@ kable(head(datm2), format = &#39;html&#39;, table.attr = &quot;class=nofluid&quo
 
 <h2>Create Payload for DataMaps</h2>
 <pre><code class="r">library(plyr)
-library(rCharts)
+</code></pre>
+
+<pre><code>
+Attaching package: &#39;plyr&#39;
+
+The following objects are masked from &#39;package:dplyr&#39;:
+
+    arrange, desc, failwith, id, mutate, summarise
+</code></pre>
+
+<pre><code class="r">library(rCharts)
 options(rcharts.cdn = TRUE)
 dat2 &lt;- dlply(na.omit(datm2), &quot;Year&quot;, function(x){
   y = toJSONArray2(x, json = F)

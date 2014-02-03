@@ -39,7 +39,7 @@ fig/step1.html
 ' scrolling='no' seamless
 class='rChart leaflet '
 id=iframe-
-chartdaf4cc8a338
+chart182a6aea9a06
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
@@ -77,10 +77,10 @@ $longitude
 [1] -73.99
 
 $bikes
-[1] 7
+[1] 9
 
 $free
-[1] 31
+[1] 29
 ```
 
 
@@ -97,7 +97,7 @@ fig/step4.html
 ' scrolling='no' seamless
 class='rChart leaflet '
 id=iframe-
-chartdaf4cc8a338
+chart182a6aea9a06
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
@@ -142,7 +142,7 @@ fig/step6.html
 ' scrolling='no' seamless
 class='rChart leaflet '
 id=iframe-
-chartdaf4cc8a338
+chart182a6aea9a06
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
@@ -188,7 +188,7 @@ fig/unnamed-chunk-5.html
 ' scrolling='no' seamless
 class='rChart leaflet '
 id=iframe-
-chartdaf4cc8a338
+chart182a6aea9a06
 ></iframe>
 <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
