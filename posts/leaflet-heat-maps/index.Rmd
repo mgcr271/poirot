@@ -39,7 +39,7 @@ cat(rjson::toJSON(crime_dat[1:2]))
 
 ## Add HeatMap
 
-```{r}
+```{r cache = F}
 # Add leaflet-heat plugin. Thanks to Vladimir Agafonkin
 L2$addAssets(jshead = c(
   "http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"

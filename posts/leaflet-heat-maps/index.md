@@ -73,13 +73,6 @@ L2$setTemplate(afterScript = sprintf("
 </script>
 ", rjson::toJSON(crime_dat)
 ))
-```
-
-```
-Error: object 'crime_dat' not found
-```
-
-```r
 
 L2
 ```
