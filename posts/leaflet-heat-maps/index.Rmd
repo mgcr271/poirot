@@ -32,11 +32,11 @@ L2
 ```{r results = 'markup', message = F}
 data(crime, package = 'ggmap')
 library(dplyr)
-dat = crime %.% 
+crime_dat = crime %.% 
   group_by(lat, lon) %.% 
   summarise(count = n())
-dat2 = toJSONArray2(na.omit(dat), json = F, names = F)
-cat(rjson::toJSON(dat2[1:2]))
+crime_dat = toJSONArray2(na.omit(crime_dat), json = F, names = F)
+cat(rjson::toJSON(crime_dat[1:2]))
 ```
 
 ## Add HeatMap
@@ -53,7 +53,7 @@ L2$setTemplate(afterScript = sprintf("
   var addressPoints = %s
   var heat = L.heatLayer(addressPoints).addTo(map)           
 </script>
-", rjson::toJSON(na.omit(dat2))
+", rjson::toJSON(crime_dat)
 ))
 
 L2
