@@ -85,25 +85,13 @@ chart182a6b6bf663
 <h2>Get Data</h2>
 
 <pre><code class="r">data(crime, package = &#39;ggmap&#39;)
-library(dplyr)
-crime_dat = crime %.% 
-  group_by(lat, lon) %.% 
-  summarise(count = n())
+library(plyr)
+crime_dat = ddply(crime, .(lat, lon), summarise, count = length(address))
+crime_dat = toJSONArray2(na.omit(crime_dat), json = F, names = F)
+cat(rjson::toJSON(crime_dat[1:2]))
 </code></pre>
 
-<pre><code>Error: This function should not be called directly
-</code></pre>
-
-<pre><code class="r">crime_dat = toJSONArray2(na.omit(crime_dat), json = F, names = F)
-</code></pre>
-
-<pre><code>Error: object &#39;crime_dat&#39; not found
-</code></pre>
-
-<pre><code class="r">cat(rjson::toJSON(crime_dat[1:2]))
-</code></pre>
-
-<pre><code>Error: object &#39;crime_dat&#39; not found
+<pre><code>[[27.5071143,-99.5055471,1],[29.4836146,-95.0618715,10]]
 </code></pre>
 
 <h2>Add HeatMap</h2>

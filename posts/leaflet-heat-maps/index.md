@@ -45,30 +45,14 @@ chart182a6b6bf663
 
 ```r
 data(crime, package = 'ggmap')
-library(dplyr)
-crime_dat = crime %.% 
-  group_by(lat, lon) %.% 
-  summarise(count = n())
-```
-
-```
-Error: This function should not be called directly
-```
-
-```r
+library(plyr)
+crime_dat = ddply(crime, .(lat, lon), summarise, count = length(address))
 crime_dat = toJSONArray2(na.omit(crime_dat), json = F, names = F)
-```
-
-```
-Error: object 'crime_dat' not found
-```
-
-```r
 cat(rjson::toJSON(crime_dat[1:2]))
 ```
 
 ```
-Error: object 'crime_dat' not found
+[[27.5071143,-99.5055471,1],[29.4836146,-95.0618715,10]]
 ```
 
 
