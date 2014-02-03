@@ -201,10 +201,10 @@ map3$setTemplate(chartDiv = "
 map3
 ```
 
-<iframe src='fig/autochoro.html' scrolling='no' seamless class='rChart datamaps' id=iframe-
-chart_4></iframe>
+<iframe src='fig/autochoro.html' scrolling='no' seamless class='rChart datamaps' id='iframe-chart_4'></iframe>
 
 <style>
+  #iframe-chart_4 {height: 550px;}
   iframe.rChart {height: 500px;} 
   table.nofluid {width: auto; margin: 0 auto;}
   pre {margin-left: 0px;}

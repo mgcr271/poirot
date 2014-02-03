@@ -18,7 +18,30 @@
       margin-right: auto;
       width: 800px;
       height: 400px;
-    }  
+    }
+    .list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+li.key {
+  border-top-width: 15px;
+  border-top-style: solid;
+  font-size: .75em;
+  width: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-inline>li {
+ display: inline-block;
+ padding-right: 0px;
+ padding-left: 0px;
+ text-align: left;
+}
+.datamaps-legend {
+  top: 0px;
+}
     </style>
     
   </head>
@@ -26,11 +49,17 @@
     
     
       <div class='container'>
-        <button class='btn' ng-click='animateMap()'>
-        <i class="fa fa-play"></i>
-        </button>
-        <h4>Crime Rate (per 100,000) in {{ year }}</h4>
-        <div id='chart_1' class='rChart datamaps'></div>  
+        <div class='row'>
+          <div class='col-md-8'>
+          <h4>
+            Crime Rate (per 100,000) in {{ year }}
+            <button class='btn' ng-click='animateMap()'>
+              <i class="fa fa-play"></i>
+            </button>
+          </h4> 
+          <div id='chart_1' class='rChart datamaps'></div>
+          </div>
+        </div>     
       </div>
       <script>
         function rChartsCtrl($scope, $timeout){
@@ -48,12 +77,23 @@
     <script id='popup-template' type='text/x-handlebars-template'>
     
 </script>
+<style>
+.hoverinfo {
+  background: black;
+  color: whitesmoke;
+  border: none;
+}
+</style>
 <script>
   var chartParams = {
  "dom": "chart_1",
 "width":    800,
 "height":    400,
 "scope": "usa",
+"geographyConfig": {
+  borderColor: "#ccc",
+  borderWidth: 0.5
+},
 "fills": {
  "A": "#FFFFB2",
 "B": "#FECC5C",
@@ -61,6 +101,11 @@
 "D": "#F03B20",
 "E": "#BD0026",
 "defaultFill": "white" 
+},
+done: function(datamap) {
+  datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+                alert(geography.properties.name);
+  });
 },
 "data": {
  "AL": {
@@ -15730,7 +15775,45 @@
   
   var mapchart_1 = new Datamap(chartParams);
   
-  
+   function addLegend2(layer, data, options) {
+    data = data || {};
+    if ( !this.options.fills ) {
+      return;
+    }
+
+    var html = '<ul class="list-inline">';
+    var label = '';
+    if ( data.legendTitle ) {
+      html = '<h4>' + data.legendTitle + '</h4>' + html;
+    }
+    for ( var fillKey in this.options.fills ) {
+
+      if ( fillKey === 'defaultFill') {
+        if (! data.defaultFillName ) {
+          continue;
+        }
+        label = data.defaultFillName;
+      } else {
+        if (data.labels && data.labels[fillKey]) {
+          label = data.labels[fillKey];
+        } else {
+          label= fillKey;
+        }
+      }
+      html += '<li class="key" style="border-top-color:' + this.options.fills[fillKey] + '">' + label + '</li>' 
+    }
+    html += '</ul>';
+
+    var hoverover = d3.select( this.options.element ).append('div')
+      .attr('class', 'datamaps-legend')
+      .html(html);
+  }
+    
+    mapchart_1.addPlugin("mylegend", addLegend2);
+    
+    mapchart_1.mylegend({
+      labels: {A: 10, B: 160, C: 280, D: 400, E: 570}
+    })
     
   // draw a bubble map if specified
   if (chartParams.bubbles) {
@@ -15742,9 +15825,6 @@
     mapchart_1.labels()
   }
   
-  if (chartParams.legend){
-    mapchart_1.legend()
-  }
   
   setProjection = function( element, options ) {
     var projection, path;
